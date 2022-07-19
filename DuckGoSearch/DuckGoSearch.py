@@ -15,9 +15,8 @@ URL = 'https://duckduckgo.com'
 
 class DuckGoSearch(unittest.TestCase):
     
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.driver = webdriver.Firefox(executable_path=PATH)
+    def setUp(self) -> None:
+        self.driver = webdriver.Firefox(executable_path=PATH)
         # cls.driver.implicitly_wait(1)
         # cls.driver.maximize_window()
 
@@ -27,16 +26,15 @@ class DuckGoSearch(unittest.TestCase):
         txtSearchBox.send_keys('Im searching in DuckduckGo')
         txtSearchBox.send_keys(Keys.ENTER)
 
-    """def test_search_webdriver(self):
+    def test_search_webdriver(self):
         self.driver.get(URL)
         txtSearchBox = self.driver.find_element(By.NAME, 'q')
         txtSearchBox.send_keys('Selenium WebDriver')
-        txtSearchBox.send_keys(Keys.ENTER)"""
+        txtSearchBox.send_keys(Keys.ENTER)
 
-    @classmethod
-    def tearDown(cls) -> None:
-        cls.driver.close()
-        cls.driver.quit()
+    def tearDown(self) -> None:
+        self.driver.close()
+        self.driver.quit()
         print('Completed')
 
 if __name__ == '__main__':

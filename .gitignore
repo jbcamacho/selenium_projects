@@ -1,2 +1,4 @@
-**/__pycache__
-**/geckodriver.log
+../__pycache__
+**geckodriver.log
+../geckodriver.log
+**__pycache__
