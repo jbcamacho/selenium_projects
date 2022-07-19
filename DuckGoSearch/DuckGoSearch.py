@@ -1,10 +1,10 @@
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from os import getenv
 import unittest
 import HtmlTestRunner
+
 
 
 FIREFOX = 'geckodriver'
