@@ -1,5 +1,6 @@
 /__pycache__
 **geckodriver.log
+*.log
 geckodriver.log
 **/__pycache__
 /selenium_venv
